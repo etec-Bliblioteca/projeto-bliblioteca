@@ -1,51 +1,83 @@
 @charset "UTF-8";
 
+
 header{
-    width: 150px;
-    height: 100%;
-    background: var(--cor1);
-    padding: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
+    width: 100%;
+    height: 80px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav{
-    width: 100%;
-    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
     display: flex;
     align-items: center;
     flex-direction: column;
+    background: var(--cor1);
+    width: 150px;
+    height: 100%;
+    overflow: hidden;
+}
+
+nav > .logoEtec{
+    margin: 15px 0px 30px 0px ;
 }
 
 nav > a{
-    padding-left: 10px;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 30px;
     display: flex;
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 150px;
-    height: 25px;
-    color: white;
-    text-decoration: none;
+    font-size: 1.5rem;
 }
 
-a:hover{
-    background-color: var(--cor2);
+nav > a:hover{
+    background: var(--cor2);
     transition: 0.3s;
 }
 
-nav > a > svg{
-    margin-right: 10px;
-    width: 15px;
-    height: 15px;
+a .linkIcon{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.linkIcon > svg{
+    width: 100%;
+    height: 100%;
     fill: white;
 }
 
-nav > a > svg path{
-    fill:white;
+
+svg path{
+    width: 100%;
+    height: 100%;
+    fill: white;
 }
 
-.active{
-    background-color: var(--cor2);
+a.active{
+    background: var(--cor2);
+}
+
+.btnMenu{
+    display: none;
+}
+
+@media screen and (max-width:300px) {
+    .btnMenu{
+        display: flex;
+        margin-left: 50px;
+    }
 }
