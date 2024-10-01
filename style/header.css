@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+header{
+    width: 150px;
+    height: 100%;
+    background: var(--cor1);
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav > a{
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 150px;
+    height: 25px;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: var(--cor2);
+    transition: 0.3s;
+}
+
+nav > a > svg{
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    fill: white;
+}
+
+nav > a > svg path{
+    fill:white;
+}
+
+.active{
+    background-color: var(--cor2);
+}

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: none;
+}
+
+:root{
+    --cor1:#607D8B;
+    --cor2:#273339;
+}
+
+body,html{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
