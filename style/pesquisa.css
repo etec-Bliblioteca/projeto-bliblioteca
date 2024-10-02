@@ -1,57 +1,92 @@
-/* From Uiverse.io by Yaya12085 */ 
+/* From Uiverse.io by Yaya12085 */
 .input-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  
+  position: relative;
+  display: flex;
+  align-items: center;
+  grid-area: pesquisa;
+}
+
+.input {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  padding: 18px 16px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.input::placeholder {
+  color: transparent;
+}
+
+.input:focus::placeholder {
+  color: rgb(131, 128, 128);
+}
+
+.input:focus,
+.input:not(:placeholder-shown) {
+  background-color: #fff;
+  border: 1px solid var(--cor1);
+  width: 290px;
+  cursor: none;
+  padding: 18px 16px 18px 45px;
+}
+
+.icon {
+  position: absolute;
+  left: 0;
+  height: 45px;
+  width: 45px;
+  background-color: #fff;
+  border-radius: 99px;
+  z-index: -1;
+  fill: var(--cor1);
+  border: 1px solid var(--cor1);
+}
+
+.input:focus + .icon,
+.input:not(:placeholder-shown) + .icon {
+  z-index: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.input:focus .btnMenu {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
   .input {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 20px;
     border: none;
     outline: none;
-    padding: 18px 16px;
+    padding: 20px 20px;
     background-color: transparent;
     cursor: pointer;
-    transition: all .5s ease-in-out;
-  }
-  
-  .input::placeholder {
-    color: transparent;
-  }
-  
-  .input:focus::placeholder {
-    color: rgb(131, 128, 128);
-  }
-  
-  .input:focus,.input:not(:placeholder-shown) {
-    background-color: #fff;
-    border: 1px solid var(--cor1);
-    width: 290px;
-    cursor: none;
-    padding: 18px 16px 18px 45px;
-  }
-  
-  .icon {
-    position: absolute;
-    left: 0;
-    height: 45px;
-    width: 45px;
-    background-color: #fff;
-    border-radius: 99px;
-    z-index: -1;
-    fill: var(--cor1);
-    border: 1px solid var(--cor1);
-  }
-  
-  .input:focus + .icon,.input:not(:placeholder-shown) + .icon {
-    z-index: 0;
-    background-color: transparent;
-    border: none;
+    transition: all 0.5s ease-in-out;
   }
 
-  .input:focus .btnMenu{
-    display: none;
+  .icon {
+    height: 65px;
+    width: 65px;
+    position: absolute;
+    left: -20px;
+    z-index: 1;
+    border: 1px solid var(--cor1);
   }
-  
+
+
+  .input:enabled,
+  .input:not(:placeholder-shown) {
+    background-color: #fff;
+    border: 1px solid var(--cor1);
+    width: 500px;
+    cursor: pointer;
+    padding: 18px 16px 18px 45px;
+  }
+}

@@ -10,6 +10,19 @@ header {
   overflow-x: hidden;
 }
 
+header.catalogo {
+  width: 100%;
+  height: 80px;
+  /* border: 1px solid black; */
+  display: grid;
+  grid-template-areas: "pesquisa btnMenu";
+  grid-template-columns: 80% 20%;
+  padding: 0px 15px;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
 
 nav {
   top: 0;
@@ -21,6 +34,7 @@ nav {
   width: 150px;
   height: 100%;
   display: flex ;
+  z-index: 100;
 }
 
 nav > .logoEtec {
@@ -38,8 +52,6 @@ nav > a {
   flex-wrap: nowrap;
   font-size: 1.5rem;
 }
-
-
 
 nav > a:hover {
   background: var(--cor2);
@@ -85,7 +97,9 @@ a.active {
   display: none;
 }
 
-@media screen and (max-width: 599px) {
+/* CELULAR */
+
+@media screen and (width <= 599px) {
   .btnMenu {
     display: flex;
     margin-left: 50px;
@@ -94,11 +108,34 @@ a.active {
   .hamburger {
     display: block !important;
   }
+
+  nav {
+    width: 70%;
+    height: 100%;
+  }
+
+  nav > a {
+    text-decoration: none;
+    color: white;
+    width: 80%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    padding: 0px 10px;
+  }
 }
 
 @media screen and (min-width:600px) {
     .menu{
         display: flex !important;
+    }
+
+    header.catalogo {
+      display: flex;
     }
 }
 
