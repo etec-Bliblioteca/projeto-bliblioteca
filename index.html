@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="style/reset.css" />
     <link rel="stylesheet" href="style/header.css" />
     <link rel="stylesheet" href="style/section.css" />
+    <link rel="stylesheet" href="style/carroselNovo.css">
+    <link rel="stylesheet" href="style/card.css">
     <title>Home</title>
   </head>
   <body>
@@ -158,7 +160,19 @@
     </nav>
     <section>
       <article class="revistas">
-        <h1>Resvistas novas</h1>
+        <h1>Revistas Novas</h1>
+        <div>
+          <div id="carrocelPefifericoNovo">
+              <button class='btnPrev btnCarrocel' id="btnPrev">
+                  <img src="icones/seta-esqueda.png" alt="">
+              </button>
+              <div id="cards">
+              </div>
+              <button class='btnNext btnCarrocel' id="btnNext">
+                  <img src="icones/seta-direita.png" alt="">
+              </button>
+          </div>
+      </div>
       </article>
       <article class="eventos">
         <h1>Eventos</h1>
@@ -167,7 +181,7 @@
         <h1>descrição</h1>
       </article>
     </section>
-
+    <script src="script/carroselNovo.js"></script>
     <script src="script/menu.js"></script>
   </body>
 </html>

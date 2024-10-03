@@ -15,8 +15,11 @@ section{
 
 article{
     width: 900px;
-    height: 150px;
+    height: fit-content;
     border: 1px solid black;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 section.catalogo{
@@ -35,21 +38,30 @@ section.catalogo > .card{
 }
 
 /* CELULAR */
-@media screen and (min-width:320px) {
+@media screen and (width<=680px) {
     article{
-        width: 300px;
+        width: 95%;
+        height: fit-content;
     }
 }
 /* TABLET OU CELULAR */
 @media screen and (min-width:600px) {
     article{
-        width: 400px;
+        height: 300px;
+    }
+    
+    section{
+        padding-left: 180px;
+    }
+
+    section.catalogo{
+        padding-left: 180px;
     }
 }
 
 /* COMPUTADOR */
 
-@media screen and (min-width:800px) {
+@media screen and (width>=900px) {
     section.catalogo{
         padding-left: 180px;
         width: 100%;
@@ -67,10 +79,16 @@ section.catalogo > .card{
         border: 1px solid red;
         border-radius: 5px;
     }
-}
 
-@media screen and (min-width:600px) {
-    section.catalogo{
-        padding-left: 180px;
+    article{
+        width: 900px;
+        height: fit-content;
+        border: 1px solid black;
+        /* overflow: hidden; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px 10px;
     }
 }
