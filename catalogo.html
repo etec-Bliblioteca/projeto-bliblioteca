@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style/section.css" />
     <link rel="stylesheet" href="style/pesquisa.css" />
     <link rel="stylesheet" href="style/card.css" />
-    <link rel="stylesheet" href="style/popstyle.css" />
+    <link rel="stylesheet" href="style/popup.css" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Home</title>
   </head>
@@ -263,7 +263,30 @@
         </div>
       </div>
     </section>
-
+    <div class="bgPoup" id="bgPoup">
+      <div class="containerPopUp">
+        <button class="btnClose" id="btnClose">X</button>
+        <img src="imagens/teste.jpg" alt="foto do popup" class="imgPopUp" />
+        <div class="containerInfoPopUp">
+          <h1 id="nomeRevista">Nome do livro</h1>
+          <p id="autorRevista">Autor: Davi Souza</p>
+          <p id="quantidadeRevista">Quantidade: infinita</p>
+        </div>
+        <div class="containerDescPopUp">
+          <h1>Descrição</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+            ducimus accusamus sequi voluptas placeat quo quidem? Porro aliquid
+            animi id in, magnam accusamus impedit ad repellendus nam.
+            Blanditiis, voluptatum ea.
+          </p>
+        </div>
+        <button class="btnReversar" id="inativo">
+    
+        </button>
+      </div>
+    </div>
+    <script src="script/popup.js"></script>
     <script src="script/menu.js"></script>
     <script src="script/card.js"></script>
   </body>

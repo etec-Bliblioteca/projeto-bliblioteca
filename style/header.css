@@ -34,7 +34,7 @@ nav {
   width: 150px;
   height: 100%;
   display: flex ;
-  z-index: 100;
+  z-index: 1;
 }
 
 nav > .logoEtec {
