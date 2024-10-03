@@ -11,16 +11,19 @@ section{
     justify-content: space-evenly;
     flex-direction: column;
     padding: 10px 0px 0px 0px;
+    gap: 30px;
 }
 
 article{
     width: 900px;
     height: fit-content;
     /* border: 1px solid black; */
-    overflow: hidden;
     display: flex;
     flex-direction: column;
+    border-radius: 5px;
+    background: #a2b6be;
 }
+
 
 section.catalogo{
     width: 100%;
@@ -49,11 +52,7 @@ section.catalogo > .card{
     }
 }
 /* TABLET OU CELULAR */
-@media screen and (min-width:600px) {
-    article{
-        height: 300px;
-    }
-    
+@media screen and (width>=600px) {
     section{
         padding-left: 180px;
     }
@@ -96,3 +95,61 @@ section.catalogo > .card{
         gap: 10px 10px;
     }
 }
+
+
+article.desc{
+    border-radius: 5px 5px 0px 0px;
+}
+
+/* From Uiverse.io by vinodjangid07 */ 
+.redes {
+    margin-top: 15px;
+    width: 80%;
+    height: fit-content;
+    /* background-color: rgb(238, 238, 238); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+    /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055); */
+  }
+  
+  /* for all social containers*/
+  .socialContainer {
+    border-radius: 5px;
+    width: 52px;
+    height: 52px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+  }
+  /* instagram*/
+  .containerOne:hover {
+    background-color: #d62976;
+    transition-duration: .3s;
+  }
+  .containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: .3s;
+  }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  .socialSvg path {
+    fill: rgb(255, 255, 255);
+  }
+  
+
+  
+  

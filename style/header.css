@@ -181,3 +181,126 @@ a.active {
     stroke-dashoffset: -32.42;
   }
   
+  /* CARROSEL DE EVENTOS */
+
+@media only screen and (max-width: 480px) {
+  .prev, .next,.text {font-size: 11px};
+  .ing{
+    height: 150px !important;
+  }
+  .dot{
+    width: 5px !important;
+    height: 5px !important;
+  }
+  
+}
+
+
+@media only screen and (min-width: 481px) {
+  .ing{
+    height: 200px !important;
+   
+  }
+  .dot{
+    width: 9px !important;
+    height: 9px !important;
+  }
+
+}
+
+@media only screen and (min-width: 601px) {
+  .ing{
+    height: 300px !important;
+   
+  }
+  .dot{
+    width: 14px !important;
+    height: 14px !important;
+  }
+  
+}
+
+.ing{
+  vertical-align: middle;
+  height: fit-content;
+  width: 100%;
+}
+
+.slide{
+  max-width: 1000px;
+  min-width: 80%;
+  position: relative;
+  margin: auto;
+}
+
+.slide-cont{
+    display: none;
+}
+
+.prev, .next{
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+     font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+     user-select: none;
+
+}
+
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+.slide-text{
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.slide-num{
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+  }
