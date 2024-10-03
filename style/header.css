@@ -16,7 +16,7 @@ header.catalogo {
   /* border: 1px solid black; */
   display: grid;
   grid-template-areas: "pesquisa btnMenu";
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 85% 15%;
   padding: 0px 15px;
   align-items: center;
   justify-content: center;

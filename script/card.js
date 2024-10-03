@@ -1,18 +1,7 @@
 const containerCard = [...document.querySelectorAll(".containerCard")];
-
-containerCard.map((card)=>{
+let modal = true;
+containerCard.map((card,index)=>{
     card.addEventListener("click",()=>{
-        Swal.fire({
-            title: `Tu escolheu o ${card.id}`,
-            width: 600,
-            padding: "3em",
-            color: "#716add",
-            backdrop: `
-              rgba(0,0,123,0.4)
-              url("/images/nyan-cat.gif")
-              left top
-              no-repeat
-            `
-          });
-    })
+      Swal.fire(`Você escolheu a revista Nº${index+1}`);
+    });
 })
