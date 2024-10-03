@@ -32,6 +32,15 @@
         width:100px;
         height: 150px;
     }
+
+    #carrocelPefifericoNovo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: fit-content;
+        /* background-color: rgb(133, 132, 132); */
+    }
 }
 
 .livro{

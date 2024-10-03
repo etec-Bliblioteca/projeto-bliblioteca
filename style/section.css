@@ -16,7 +16,7 @@ section{
 article{
     width: 900px;
     height: fit-content;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -42,6 +42,10 @@ section.catalogo > .card{
     article{
         width: 95%;
         height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: visible;
     }
 }
 /* TABLET OU CELULAR */
