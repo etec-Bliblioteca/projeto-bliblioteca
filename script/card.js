@@ -5,7 +5,7 @@ const autorRevista = document.getElementById("autorRevista");
 const quantidadeRevista = document.getElementById("quantidadeRevista");
 
 let qtdeRevista = 1;
-const btnReversar = document.querySelector(".btnReversar");
+const btnReservar = document.querySelector(".btnReservar");
 btnClose.addEventListener("click", () => {
   bgPoup.style.display = "none";
 });
@@ -17,11 +17,11 @@ containerCard.map((card, index) => {
     nomeRevista.innerHTML = `Revista ${index + 1}`;
 
     if (qtdeRevista > 0) {
-      btnReversar.setAttribute("id", "ativo");
-      btnReversar.innerHTML = "Revervar";
+      btnReservar.setAttribute("id", "ativo");
+      btnReservar.innerHTML = "Reservar";
     } else {
-      btnReversar.setAttribute("id", "inativo");
-      btnReversar.innerHTML = `<svg
+      btnReservar.setAttribute("id", "inativo");
+      btnReservar.innerHTML = `<svg
       viewBox="-4 0 32 32"
       xmlns="http://www.w3.org/2000/svg"
       fill="#000000"

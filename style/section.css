@@ -15,13 +15,29 @@ section{
 }
 
 article{
-    width: 900px;
+    padding: 10px 0px 0px 0px;
+    width: 500px;
     height: fit-content;
-    /* border: 1px solid black; */
+    border: 1px solid var(--cor2);
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     border-radius: 5px;
     background: #a2b6be;
+}
+
+article > h1{
+    margin-bottom: 10px;
+    width: 200px;
+    height: fit-content;
+    border-radius: 5px;
+    padding: 15px;
+    background: var(--cor1);
+    text-align: center;
+    font-family: var(--font);
+    text-transform: uppercase;
+    /* background: #a2b6be; */
 }
 
 
@@ -36,7 +52,7 @@ section.catalogo{
 section.catalogo > .card{
     width: 150px;
     height: 200px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     border-radius: 5px;
 }
 
@@ -50,7 +66,12 @@ section.catalogo > .card{
         justify-content: center;
         overflow: visible;
     }
+
+    article.eventos{
+        height: 500px;
+    }
 }
+
 /* TABLET OU CELULAR */
 @media screen and (width>=600px) {
     section{
@@ -63,7 +84,6 @@ section.catalogo > .card{
 }
 
 /* COMPUTADOR */
-
 @media screen and (width>=900px) {
     section.catalogo{
         padding-left: 180px;
@@ -79,14 +99,14 @@ section.catalogo > .card{
     section.catalogo > .card{
         width: 250px;
         height: 350px;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         border-radius: 5px;
     }
 
     article{
-        width: 900px;
+        width: 800px;
         height: fit-content;
-        border: 1px solid black;
+        /* border: 1px solid black; */
         /* overflow: hidden; */
         display: flex;
         align-items: center;
@@ -97,9 +117,19 @@ section.catalogo > .card{
 }
 
 
+/* DESCRIÇÂO */
+
 article.desc{
     border-radius: 5px 5px 0px 0px;
+    padding: 10px;
+    font-family: var(--font);
 }
+
+article.desc > p{
+    width: 80%;
+    font-family: var(--font);
+}
+
 
 /* From Uiverse.io by vinodjangid07 */ 
 .redes {
@@ -127,13 +157,16 @@ article.desc{
     overflow: hidden;
     transition-duration: .3s;
   }
+
   /* instagram*/
   .containerOne:hover {
-    background-color: #d62976;
+    background-color: #00acee;
+
     transition-duration: .3s;
   }
+
   .containerTwo:hover {
-    background-color: #00acee;
+    background-color: #d62976;
     transition-duration: .3s;
   }
   

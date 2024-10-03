@@ -1,103 +1,243 @@
-#carrocelPefifericoNovo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 900px;
-    height: fit-content;
-    /* background-color: rgb(133, 132, 132); */
+#carrocelPefifericoNovo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  height: fit-content;
+  /* background-color: rgb(133, 132, 132); */
 }
 
-#cards{
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    height: 250px;
-    width: 450px;
+#cards {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  height: 250px;
+  width: 450px;
 }
 
-.card{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width:100%;
-    height: 100%;
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 /* CELUAR */
 @media screen and (width<=480px) {
-    .card{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width:100px;
-        height: 150px;
-    }
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 150px;
+  }
 
-    #carrocelPefifericoNovo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 150px;
-        height: fit-content;
-        /* background-color: rgb(133, 132, 132); */
-    }
+  #carrocelPefifericoNovo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: fit-content;
+    /* background-color: rgb(133, 132, 132); */
+  }
+
+  .btnPrev {
+    display: none;
+  }
+
+  .btnNext {
+    display: none;
+  }
+}
+/* TABLET */
+@media screen and (width>=481px) and (width<=768px) {
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 250px;
+  }
+
+  #carrocelPefifericoNovo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: fit-content;
+    /* background-color: rgb(133, 132, 132); */
+  }
+
+  .btnPrev {
+    display: none;
+  }
+
+  .btnNext {
+    display: none;
+  }
 }
 
-.livro{
-    color: white;
-    width: 60%;
-    height: 60%;
-    border-radius: 5px;
-    background-color: rgb(136, 125, 125);
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    filter: blur(1.2px);
+.livro {
+  color: white;
+  width: 60%;
+  height: 60%;
+  border-radius: 5px;
+  background-color: rgb(136, 125, 125);
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  filter: blur(1.2px);
 }
 
-.focar{
-    animation: aumentar 0.5s ease-in-out both;
-    filter: blur(0px);
+.focar {
+  animation: aumentar 0.5s ease-in-out both;
+  filter: blur(0px);
 }
 
 @keyframes aumentar {
-
-    0%{
-        width: 70%;
-        height: 70%;
-    }
-    100%{
-        width: 85%;
-        height: 85%;
-    }
-    
+  0% {
+    width: 70%;
+    height: 70%;
+  }
+  100% {
+    width: 85%;
+    height: 85%;
+  }
 }
 
-.sumir{
-    display: none;
+.sumir {
+  display: none;
 }
 
 /* Configuração do botão */
-.btnPrev{
-    margin-right: 10px;
+.btnPrev {
+  margin-right: 10px;
 }
 
-.btnNext{
-    margin-left: 10px;
+.btnNext {
+  margin-left: 10px;
 }
 
-.btnCarrocel{
-    border: none;
-    background-color: transparent;
-    width: 35px;
-    height: 35px;
+.btnCarrocel {
+  border: none;
+  background-color: transparent;
+  width: 35px;
+  height: 35px;
 }
 
-.btnCarrocel img{
-    transition: 0.3s ease-in-out;
-    width: 25px;
-    height: 25px;
+.btnCarrocel img {
+  transition: 0.3s ease-in-out;
+  width: 25px;
+  height: 25px;
 }
 
-.btnCarrocel img:hover{
-    width: 35px;
-    height: 35px;
+.btnCarrocel img:hover {
+  width: 35px;
+  height: 35px;
+}
+
+/* CARROSEL EVENTOS */
+
+@media screen and (width<=480px) {
+  swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (width>=481px) and (width<=768px) {
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (width>=769px) {
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
