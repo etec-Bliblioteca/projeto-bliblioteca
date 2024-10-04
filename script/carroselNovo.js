@@ -11,7 +11,7 @@ id=1;
 function construir() {
     containerCard.innerHTML += `
         <div class="card">
-            <div class="livro">${id}</div>
+            <div class="livro"><img src='imagens/exemplar${id}.jpg'></div>
         </div>        
     `;
 

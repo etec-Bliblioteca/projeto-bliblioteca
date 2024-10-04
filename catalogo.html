@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="style/pesquisa.css" />
     <link rel="stylesheet" href="style/card.css" />
     <link rel="stylesheet" href="style/popup.css" />
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>Home</title>
+    <title>Catalogo</title>
   </head>
   <body>
     <header class="catalogo">
@@ -59,7 +58,7 @@
       </label>
     </header>
     <nav class="menu" id="menu">
-      <img src="#" alt="Logo da Etec" class="logoEtec" />
+      <img src="imagens/logoBliblioteca.png" alt="Logo da Etec" class="logoEtec" />
       
       <a href="index.html">
         <div class="linkIcon">
@@ -112,7 +111,7 @@
         Catalogo
       </a>
 
-      <a href="#" class="btnLogin">
+      <a href="login.html" class="btnLogin">
         <div class="linkIcon">
           <svg
             fill="#000000"
@@ -139,19 +138,38 @@
     <section class="catalogo">
       <div class="containerCard" id="revista_1">
         <div class="cardImg">
-          <img src="imagens/teste.jpg" alt="imagem da revistas" />
+          <img src="imagens/exemplar1.jpg" alt="imagem da revistas" />
         </div>
       </div>
-      <div class="containerCard">
+
+      <div class="containerCard" id="revista_2">
         <div class="cardImg">
-          <img src="imagens/teste.jpg" alt="imagem da revistas" />
+          <img src="imagens/exemplar2.jpg" alt="imagem da revistas" />
+        </div>
+      </div>
+
+      <div class="containerCard" id="revista_3">
+        <div class="cardImg">
+          <img src="imagens/exemplar3.jpg" alt="imagem da revistas" />
+        </div>
+      </div>
+
+      <div class="containerCard" id="revista_4">
+        <div class="cardImg">
+          <img src="imagens/exemplar4.jpg" alt="imagem da revistas" />
+        </div>
+      </div>
+
+      <div class="containerCard" id="revista_5">
+        <div class="cardImg">
+          <img src="imagens/exemplar5.jpg" alt="imagem da revistas" />
         </div>
       </div>
     </section>
     <div class="bgPoup" id="bgPoup">
       <div class="containerPopUp">
         <button class="btnClose" id="btnClose">X</button>
-        <img src="imagens/teste.jpg" alt="foto do popup" class="imgPopUp" />
+        <img src="imagens/teste.jpg" alt="foto do popup" class="imgPopUp" id="imgPopUp" />
         <div class="containerInfoPopUp">
           <h1 id="nomeRevista">Nome do livro</h1>
           <p id="autorRevista">Autor: Davi Souza</p>
@@ -170,7 +188,6 @@
         </button>
       </div>
     </div>
-    <script src="script/popup.js"></script>
     <script src="script/menu.js"></script>
     <script src="script/card.js"></script>
   </body>

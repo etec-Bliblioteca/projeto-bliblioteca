@@ -3,18 +3,22 @@ const btnClose = document.getElementById("btnClose");
 const nomeRevista = document.getElementById("nomeRevista");
 const autorRevista = document.getElementById("autorRevista");
 const quantidadeRevista = document.getElementById("quantidadeRevista");
-
-let qtdeRevista = 1;
+const imgPopUp = document.getElementById("imgPopUp");
+const cardImg = [...document.querySelectorAll(".cardImg")];
+let qtdeRevista = 0;
 const btnReservar = document.querySelector(".btnReservar");
 btnClose.addEventListener("click", () => {
   bgPoup.style.display = "none";
 });
 
 const containerCard = [...document.querySelectorAll(".containerCard")];
+// console.log(containerCard)
 let modal = true;
 containerCard.map((card, index) => {
   card.addEventListener("click",()=>{
     nomeRevista.innerHTML = `Revista ${index + 1}`;
+
+    imgPopUp.src = cardImg[index].firstElementChild.src;
 
     if (qtdeRevista > 0) {
       btnReservar.setAttribute("id", "ativo");

@@ -23,6 +23,18 @@ header.catalogo {
   overflow-x: hidden;
 }
 
+header > img{
+  width: 50px;
+  height: 50px;
+}
+
+/* TABLET OU CELULAR */
+@media screen and (width>=600px) {
+  header{
+      padding-left: 180px;
+  }
+}
+
 
 nav {
   top: 0;
@@ -39,6 +51,8 @@ nav {
 
 nav > .logoEtec {
   margin: 15px 0px 30px 0px;
+  width: 50px;
+  height: 50px;
 }
 
 nav > a {
@@ -127,6 +141,7 @@ a.active {
     padding: 0px 10px;
   }
 }
+
 
 @media screen and (width>=600px) {
     .menu{
