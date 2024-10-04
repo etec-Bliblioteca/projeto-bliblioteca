@@ -6,7 +6,8 @@ header {
   /* border: 1px solid black; */
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-items: center;
+  justify-content: center;
   overflow-x: hidden;
 }
 
@@ -24,22 +25,16 @@ header.catalogo {
 }
 
 header > img{
+  grid-area: logo;
   width: 50px;
   height: 50px;
-}
-
-/* TABLET OU CELULAR */
-@media screen and (width>=600px) {
-  header{
-      padding-left: 180px;
-  }
 }
 
 
 nav {
   top: 0;
   left: 0;
-  position: absolute;
+  position: fixed;
   align-items: center;
   flex-direction: column;
   background: var(--cor1);
@@ -112,7 +107,20 @@ a.active {
 }
 
 /* CELULAR */
-@media screen and (width <= 480px) {
+@media screen and (width <= 680px) {
+
+  header {
+    width: 100%;
+    height: 80px;
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-areas: "logo btnMenu";
+    grid-template-columns: 85% 15%;
+    align-items: center;
+    justify-items: center;
+    overflow-x: hidden;
+  }
+
   .btnMenu {
     display: flex;
     margin-left: 50px;
@@ -143,7 +151,10 @@ a.active {
 }
 
 
-@media screen and (width>=600px) {
+@media screen and (width>=681px) {
+    header{
+      padding-left: 180px;
+  }
     .menu{
         display: flex !important;
     }
