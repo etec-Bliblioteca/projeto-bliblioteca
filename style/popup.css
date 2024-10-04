@@ -14,7 +14,7 @@
 .containerPopUp{
     position: relative;
     width: 80%;
-    height: max-content;
+    height: fit-content;
     /* overflow-y: scroll; */
     background-color: #ffffff;
     border-radius: 5px;
@@ -30,7 +30,7 @@
 @media screen and (width<=480px) {
 
     .containerPopUp{
-        position: relative;
+        position: absolute;
         width: 80%;
         height: 80%;
         overflow-y: scroll;
