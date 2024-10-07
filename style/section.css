@@ -203,3 +203,46 @@ article.desc > p{
       }
     
 }
+
+/* ÁREA DO ADMINISTRADOR */
+
+section.adm{
+    padding-right: 10px;
+    padding-left: 160px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+section.adm > article{
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+section.adm > article > h1{
+    width: 100%;
+}
+
+section.adm > article{
+    width: 550px;
+    height: calc(100% - 10px);
+}
+
+article.agdVencidos > .cardAgd{
+    border: 2px solid red;
+}
+
+/* LIBERAÇÃO */
+section.adm > article.lib{
+    background: red;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+article.lib::-webkit-scrollbar{
+    display: none;
+}
