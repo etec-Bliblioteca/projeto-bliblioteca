@@ -50,10 +50,10 @@
             </div>
             <div class="cardInfo">
               <h1><?php echo $nome?></h1>
-              <p><?php echo $rm?></p>
-              <p><?php echo $email?></p>
-              <p>Turma: 2° Info - Manha</p>
+              <p>RM: <?php echo $rm?></p>
+              <p>Email: <?php echo $email?></p>
               <p>Telefone: (11)94933-5503</p>
+              <p>Turma: 2° Info - Manha</p>
             </div>
             <div class="btnsLib">
               <button type="submit" class="btnLiberar" name="btnLiberar">

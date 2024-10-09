@@ -18,18 +18,19 @@ article{
     padding: 10px 0px 0px 0px;
     width: 500px;
     height: fit-content;
-    border: 1px solid var(--cor2);
+    /* border: 1px solid var(--cor2); */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     border-radius: 5px;
-    background: #a2b6be;
+    /* background: #a2b6be; */
 }
 
 article > h1{
     margin-bottom: 10px;
-    width: 200px;
+    /* min-width: 200px; */
+    max-width: fit-content;
     height: fit-content;
     border-radius: 5px;
     padding: 15px;
@@ -132,6 +133,8 @@ article.desc{
 
 article.desc > p{
     width: 80%;
+    text-align: justify;
+    text-indent: 30px;
     font-family: var(--font);
 }
 
@@ -238,11 +241,41 @@ article.agdVencidos > .cardAgd{
 
 /* LIBERAÇÃO */
 section.adm > article.lib{
-    background: red;
+    background: none;
     width: 100%;
     overflow-y: scroll;
 }
 
 article.lib::-webkit-scrollbar{
     display: none;
+}
+
+/* ADICIONAR */
+section.adm > .adicionar{
+    width: 900px;
+    background: none;
+    border: none;
+}
+
+article.adicionar > a{
+    width: 250px;
+    height: 150px;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    text-transform: uppercase;
+    font-family: var(--font);
+    font-weight: bolder;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+article.adicionar > a > svg{
+    width: 50px;
+    height: 50px;
 }

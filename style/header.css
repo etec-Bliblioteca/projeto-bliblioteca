@@ -76,6 +76,7 @@ nav > a:hover {
   background-color: var(--cor2);
 }
 
+
 a .linkIcon {
   width: 20px;
   height: 20px;
@@ -108,7 +109,6 @@ a.active {
 
 /* CELULAR */
 @media screen and (width <= 680px) {
-
   header {
     width: 100%;
     height: 80px;
@@ -130,9 +130,12 @@ a.active {
     display: block !important;
   }
 
+
   nav {
-    width: 70%;
+    width: 0px;
     height: 100%;
+    overflow: hidden;
+    transition: 0.2s;
   }
 
   nav > a {
