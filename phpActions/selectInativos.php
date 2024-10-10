@@ -1,5 +1,5 @@
 <?php 
-    require_once("connect.php");
+    require_once("connectUsers.php");
 
     //VERIFICAR QUAL USER SERÁ LIBERADO
     if(isset($_POST['btnLiberar'])){
@@ -17,13 +17,15 @@
     $query = "SELECT * FROM users WHERE estado = 'inativo'";
 
     $result = mysqli_query($connect,$query);
-
+    // var_dump($result);
     if(mysqli_num_rows($result) > 0){
         while($row = mysqli_fetch_array($result)){
             $idUser =  $row['iduser'];
             $nome =  $row['nome'];
             $rm =  $row['rm'];
             $email =  $row['email'];
+            $telefone = $row['telefone'];
+            $turma = $row['turma'];
 ?>
        <div class="cardLib">
         <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
@@ -52,8 +54,8 @@
               <h1><?php echo $nome?></h1>
               <p>RM: <?php echo $rm?></p>
               <p>Email: <?php echo $email?></p>
-              <p>Telefone: (11)94933-5503</p>
-              <p>Turma: 2° Info - Manha</p>
+              <p>Telefone: <?php echo $telefone?></p>
+              <p>Turma: <?php echo $turma?></p>
             </div>
             <div class="btnsLib">
               <button type="submit" class="btnLiberar" name="btnLiberar">

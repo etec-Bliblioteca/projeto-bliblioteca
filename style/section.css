@@ -188,21 +188,22 @@ article.desc > p{
   .socialSvg path {
     fill: rgb(255, 255, 255);
   }
+
+  /* SESSÂO DE LOGIN */
   
   section.login{
-    width: fit-content;
-    position: absolute;
-    top: 0%;
-    left: 35%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
   }
   
 
   @media screen and (width<=680px) {
     section.login{
         width: fit-content;
-        position: absolute;
-        top: 0%;
-        left: 45%;
+     
       }
     
 }
