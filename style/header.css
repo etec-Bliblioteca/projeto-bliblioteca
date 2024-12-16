@@ -70,11 +70,22 @@ nav > a:hover {
 .btnLogin{
   padding: 3px;
   width: 80%;
-  border-radius: 10px;
+  border-radius: 5px;
   position: absolute;
   bottom: 10px;
   background-color: var(--cor2);
 }
+
+.btnPerfil{
+  padding: 3px;
+  font-size: 20px;
+  width: 80%;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 5px;
+  background-color: var(--cor2);
+}
+
 
 
 a .linkIcon {
@@ -117,7 +128,7 @@ a.active {
     grid-template-areas: "logo btnMenu";
     grid-template-columns: 85% 15%;
     align-items: center;
-    justify-items: center;
+    justify-items: stretch;
     overflow-x: hidden;
   }
 

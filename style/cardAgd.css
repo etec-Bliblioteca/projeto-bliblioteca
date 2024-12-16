@@ -2,46 +2,73 @@
 /* CARD DE AGENDAMENTOS */
 
 .cardAgd{
-    width: fit-content;
-    height: fit-content;
+    min-width: fit-content;
+    max-width: fit-content;
     padding: 10px;
-    background: white;
-    border-radius: 5px;
-    border: 1px solid #000000;
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 5px;
+    background-color: var(--cor1-1);
+    border-radius: 5px;
+    border: 3px solid black;
 }
-.cardAgd h1,p{
+
+.cardAgd form  h1{
+    font-size: 1rem;
+}
+
+.cardAgd form p{
+    font-size: 0.9rem;
+}
+
+.cardAgd form p,h1{
     font-family: var(--font);
 }
 
-.cardAgd .btnAgd{
+.cardAgd form > .btnAgd{
     width: 100%;
-    margin-top: 10px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 10px;
 }
 
 .btnAgd > button{
-    width: 100px;
-    height: 25px;
-    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    gap: 5px;
+    border-radius: 5px;
+    color: white;
+    font-family: var(--font);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.8rem;
 }
 
 .btnEntregar{
-    background-color: #F1FF51;
+    background: var(--cor1);
+}
+
+.btnAdiar{
+    background: rgb(159, 159, 0);
 }
 
 .btnChamar{
-    background: #05FF00;
+    background-color: #27B43E;
 }
 
-.btnChamar > svg{
+.btnChamar::before{
+    content: '';
     width: 15px;
+    height: 15px;
+    background: url("../imagens/logoZapZap.svg");
+    background-size: cover;
 }
+

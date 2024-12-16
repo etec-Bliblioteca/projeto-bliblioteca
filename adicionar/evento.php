@@ -1,18 +1,23 @@
-<?php require_once('phpActions/verificarLogin.php')?>
+<?php require_once('../phpActions/verificarLogin.php');?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <link
+      rel="shortcut icon"
+      href="../imagens/logoBliblioteca.png"
+      type="image/x-icon"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/header.css" />
-    <link rel="stylesheet" href="style/section.css" />
-    <link rel="stylesheet" href="style/reset.css" />
-    <link rel="stylesheet" href="style/cardLib.css" />
-    <title>Home Administrador</title>
+    <link rel="stylesheet" href="../style/header.css" />
+    <link rel="stylesheet" href="../style/section.css" />
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/formRevista.css" />
+    <title>Adicionar Evento</title>
   </head>
   <body>
     <header>
-      <img src="imagens/logoBliblioteca.png" alt="Logo da Bliblioteca" />
+      <img src="../imagens/logoBliblioteca.png" alt="Logo da Bliblioteca" />
       <label class="hamburger" id="btnMenu">
         <input type="checkbox" id="btnCheckbox" />
         <svg viewBox="0 0 32 32">
@@ -26,12 +31,11 @@
     </header>
     <nav class="menu" id="menu">
       <img
-        src="imagens/logoBliblioteca.png"
+        src="../imagens/logoBliblioteca.png"
         alt="Logo da Etec"
         class="logoEtec"
       />
-
-      <a href="admin.php" >
+      <a href="../admin.php">
         <div class="linkIcon">
           <svg
             viewBox="0 0 24 24"
@@ -57,7 +61,7 @@
         Home
       </a>
 
-      <a href="pedidos.php">
+      <a href="../pedidos.php">
         <div class="linkIcon">
           <svg
             fill="#000000"
@@ -82,7 +86,7 @@
         Pedidos
       </a>
 
-      <a href="liberacao.php" class="active">
+      <a href="../liberacao.php">
         <div class="linkIcon">
           <svg
             version="1.1"
@@ -121,7 +125,7 @@
         Liberação
       </a>
 
-      <a href="adicionar.php">
+      <a href="../adicionar.php" class="active">
         <div class="linkIcon">
           <svg
             fill="#000000"
@@ -148,7 +152,7 @@
         Adicionar
       </a>
 
-      <a href="login.php" class="btnLogin">
+      <a href="../login.php " class="btnLogin">
         <div class="linkIcon">
           <svg
             fill="#000000"
@@ -173,40 +177,161 @@
       >
     </nav>
     <section class="adm">
-      <article class="lib">
-        <!-- <div class="cardLib">
-          <div class="cardIcon">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M19.5119 5.85L13.5719 2.42C12.6019 1.86 11.4019 1.86 10.4219 2.42L4.49187 5.85C3.52187 6.41 2.92188 7.45 2.92188 8.58V15.42C2.92188 16.54 3.52187 17.58 4.49187 18.15L10.4319 21.58C11.4019 22.14 12.6019 22.14 13.5819 21.58L19.5219 18.15C20.4919 17.59 21.0919 16.55 21.0919 15.42V8.58C21.0819 7.45 20.4819 6.42 19.5119 5.85ZM12.0019 7.34C13.2919 7.34 14.3319 8.38 14.3319 9.67C14.3319 10.96 13.2919 12 12.0019 12C10.7119 12 9.67188 10.96 9.67188 9.67C9.67188 8.39 10.7119 7.34 12.0019 7.34ZM14.6819 16.66H9.32187C8.51187 16.66 8.04187 15.76 8.49187 15.09C9.17187 14.08 10.4919 13.4 12.0019 13.4C13.5119 13.4 14.8319 14.08 15.5119 15.09C15.9619 15.75 15.4819 16.66 14.6819 16.66Z"
-                  fill="#292D32"
-                ></path>
-              </g>
-            </svg>
+      <article class="adicionar">
+        <h1>Adicionar Evento</h1>
+        <form
+          action="../phpActions/addEvento.php"
+          class="formRevista"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <div class="campoForm" id="campo-img">
+            <div class="input-group">
+              <label class="label">Capa:</label>
+              <label for="imgEvento" class="inputImg">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M12 8L12 16"
+                      stroke="#323232"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M15 11L12.087 8.08704V8.08704C12.039 8.03897 11.961 8.03897 11.913 8.08704V8.08704L9 11"
+                      stroke="#323232"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M3 15L3 16L3 19C3 20.1046 3.89543 21 5 21L19 21C20.1046 21 21 20.1046 21 19L21 16L21 15"
+                      stroke="#323232"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </svg>
+                <input type="file" name="imgEvento" id="imgEvento" />
+              </label>
+            </div>
+            <div class="input-group">
+              <label class="label">Preview:</label>
+              <div class="campoImgPreviewEvento" id="campoImgPreviewEvento">
+              </div>
+            </div>
           </div>
-          <div class="cardInfo">
-            <h1>Aluno Teste</h1>
-            <p>RM:12345</p>
-            <p>Email: daviekalebe2200@gmail.com</p>
-            <p>Turma: 2° Info - Manha</p>
-            <p>Telefone: (11)94933-5503</p>
-          </div>
-          <div class="btnsLib">
-            <button type="submit" class="btnLiberar">
+          <div class="campoForm">
+            <button type="submit" id="btnCadastrar" name="btnCadastrar">
               <svg
                 fill="#000000"
-                viewBox="0 0 24 24"
+                viewBox="0 0 64 64"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xml:space="preserve"
+                xmlns:serif="http://www.serif.com/"
+                style="
+                  fill-rule: evenodd;
+                  clip-rule: evenodd;
+                  stroke-linejoin: round;
+                  stroke-miterlimit: 2;
+                "
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <rect
+                    id="Icons"
+                    x="-1024"
+                    y="0"
+                    width="1280"
+                    height="800"
+                    style="fill: none"
+                  ></rect>
+                  <g id="Icons1" serif:id="Icons">
+                    <g id="Strike"></g>
+                    <g id="H1"></g>
+                    <g id="H2"></g>
+                    <g id="H3"></g>
+                    <g id="list-ul"></g>
+                    <g id="hamburger-1"></g>
+                    <g id="hamburger-2"></g>
+                    <g id="list-ol"></g>
+                    <g id="list-task"></g>
+                    <g id="trash"></g>
+                    <g id="vertical-menu"></g>
+                    <g id="horizontal-menu"></g>
+                    <g id="sidebar-2"></g>
+                    <g id="Pen"></g>
+                    <g id="Pen1" serif:id="Pen">
+                      <path
+                        d="M55.944,51.712l0,4.201l-33.652,-0.027l4.71,-4.174l28.942,0Zm-7.555,-43.712c1.649,0 2.505,0.128 4.752,2.011c2.294,1.921 2.707,3.419 2.803,5.087c0.102,1.795 -0.504,3.976 -2.188,5.681l-31.961,31.961c-0.52,0.475 -0.629,0.45 -0.977,0.553l-10.226,2.557c-1.472,0.299 -2.854,-1.049 -2.55,-2.55l2.557,-10.226c0.1,-0.334 0.133,-0.517 0.553,-0.976c10.696,-10.697 21.195,-21.594 32.09,-32.087c1.421,-1.335 3.497,-2.011 5.147,-2.011Zm-32.375,35.182l-1.477,1.477l-1.566,6.262l6.262,-1.566c0.493,-0.492 0.985,-0.983 1.479,-1.474l-4.698,-4.699Zm30.176,-20.573l-4.802,-4.801l-22.493,22.493l4.712,4.713c7.549,-7.448 15.196,-14.801 22.583,-22.405Zm2.826,-2.936c0.618,-0.648 1.234,-1.298 1.848,-1.951c1.673,-1.826 0.443,-5.454 -2.307,-5.578c-0.056,-0.002 -0.112,-0.002 -0.168,-0.002c-0.861,0.016 -1.699,0.372 -2.312,0.977l-1.807,1.808l4.746,4.746Z"
+                        style="fill-rule: nonzero"
+                      ></path>
+                    </g>
+                    <g id="clock"></g>
+                    <g id="external-link"></g>
+                    <g id="hr"></g>
+                    <g id="info"></g>
+                    <g id="warning"></g>
+                    <g id="plus-circle"></g>
+                    <g id="minus-circle"></g>
+                    <g id="vue"></g>
+                    <g id="cog"></g>
+                    <g id="logo"></g>
+                    <g id="radio-check"></g>
+                    <g id="eye-slash"></g>
+                    <g id="eye"></g>
+                    <g id="toggle-off"></g>
+                    <g id="shredder"></g>
+                    <g
+                      id="spinner--loading--dots-"
+                      serif:id="spinner [loading, dots]"
+                    ></g>
+                    <g id="react"></g>
+                    <g id="check-selected"></g>
+                    <g id="turn-off"></g>
+                    <g id="code-block"></g>
+                    <g id="user"></g>
+                    <g id="coffee-bean"></g>
+                    <g id="coffee-beans">
+                      <g id="coffee-bean1" serif:id="coffee-bean"></g>
+                    </g>
+                    <g id="coffee-bean-filled"></g>
+                    <g id="coffee-beans-filled">
+                      <g id="coffee-bean2" serif:id="coffee-bean"></g>
+                    </g>
+                    <g id="clipboard"></g>
+                    <g id="clipboard-paste"></g>
+                    <g id="clipboard-copy"></g>
+                    <g id="Layer1"></g>
+                  </g>
+                </g>
+              </svg>
+              Cadastrar
+            </button>
+            <a href="../adicionar.html" id="btnCancelar">
+              <svg
+                fill="#000000"
+                viewBox="0 0 32 32"
+                version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -216,33 +341,18 @@
                   stroke-linejoin="round"
                 ></g>
                 <g id="SVGRepo_iconCarrier">
-                  <defs>
-                    <style>
-                      .cls-1 {
-                        fill-rule: evenodd;
-                      }
-                    </style>
-                  </defs>
+                  <title>cancel1</title>
                   <path
-                    id="accept"
-                    class="cls-1"
-                    d="M1008,120a12,12,0,1,1,12-12A12,12,0,0,1,1008,120Zm0-22a10,10,0,1,0,10,10A10,10,0,0,0,1008,98Zm-0.08,14.333a0.819,0.819,0,0,1-.22.391,0.892,0.892,0,0,1-.72.259,0.913,0.913,0,0,1-.94-0.655l-2.82-2.818a0.9,0.9,0,0,1,1.27-1.271l2.18,2.184,4.46-7.907a1,1,0,0,1,1.38-.385,1.051,1.051,0,0,1,.36,1.417Z"
-                    transform="translate(-996 -96)"
+                    d="M16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13zM16 6c-5.522 0-10 4.478-10 10s4.478 10 10 10c5.523 0 10-4.478 10-10s-4.477-10-10-10zM20.537 19.535l-1.014 1.014c-0.186 0.186-0.488 0.186-0.675 0l-2.87-2.87-2.87 2.87c-0.187 0.186-0.488 0.186-0.675 0l-1.014-1.014c-0.186-0.186-0.186-0.488 0-0.675l2.871-2.869-2.871-2.87c-0.186-0.187-0.186-0.489 0-0.676l1.014-1.013c0.187-0.187 0.488-0.187 0.675 0l2.87 2.87 2.87-2.87c0.187-0.187 0.489-0.187 0.675 0l1.014 1.013c0.186 0.187 0.186 0.489 0 0.676l-2.871 2.87 2.871 2.869c0.186 0.187 0.186 0.49 0 0.675z"
                   ></path>
                 </g>
               </svg>
-                Liberar
-            </button>
-            <button type="submit" class="btnRecusar">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8.00386 9.41816C7.61333 9.02763 7.61334 8.39447 8.00386 8.00395C8.39438 7.61342 9.02755 7.61342 9.41807 8.00395L12.0057 10.5916L14.5907 8.00657C14.9813 7.61605 15.6144 7.61605 16.0049 8.00657C16.3955 8.3971 16.3955 9.03026 16.0049 9.42079L13.4199 12.0058L16.0039 14.5897C16.3944 14.9803 16.3944 15.6134 16.0039 16.0039C15.6133 16.3945 14.9802 16.3945 14.5896 16.0039L12.0057 13.42L9.42097 16.0048C9.03045 16.3953 8.39728 16.3953 8.00676 16.0048C7.61624 15.6142 7.61624 14.9811 8.00676 14.5905L10.5915 12.0058L8.00386 9.41816Z" fill="#0F0F0F"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM3.00683 12C3.00683 16.9668 7.03321 20.9932 12 20.9932C16.9668 20.9932 20.9932 16.9668 20.9932 12C20.9932 7.03321 16.9668 3.00683 12 3.00683C7.03321 3.00683 3.00683 7.03321 3.00683 12Z" fill="#0F0F0F"></path> </g></svg>
-              Recusar
-            </button>
+              Cancelar
+            </a>
           </div>
-        </div> -->
-        <?php 
-          require_once("phpActions/selectInativos.php");
-        ?>
+        </form>
       </article>
     </section>
+    <script src="../script/addEvento.js"></script>
   </body>
 </html>
