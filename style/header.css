@@ -1,0 +1,228 @@
+@charset "UTF-8";
+
+header {
+  width: 100%;
+  height: 80px;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+header.catalogo {
+  width: 100%;
+  height: 80px;
+  /* border: 1px solid black; */
+  display: grid;
+  grid-template-areas: "pesquisa btnMenu";
+  grid-template-columns: 85% 15%;
+  padding: 0px 15px;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+header > img{
+  grid-area: logo;
+  width: 50px;
+  height: 50px;
+}
+
+
+nav {
+  top: 0;
+  left: 0;
+  position: fixed;
+  align-items: center;
+  flex-direction: column;
+  background: var(--cor1);
+  width: 150px;
+  height: 100%;
+  display: flex ;
+  z-index: 100;
+}
+
+nav > .logoEtec {
+  margin: 15px 0px 30px 0px;
+  width: 50px;
+  height: 50px;
+}
+
+nav > a {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-size: 1.5rem;
+}
+
+nav > a:hover {
+  background: var(--cor2);
+  transition: 0.3s;
+}
+
+.btnLogin{
+  padding: 3px;
+  width: 80%;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 10px;
+  background-color: var(--cor2);
+}
+
+.btnPerfil{
+  padding: 3px;
+  font-size: 20px;
+  width: 80%;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 5px;
+  background-color: var(--cor2);
+}
+
+
+
+a .linkIcon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.linkIcon > svg {
+  width: 100%;
+  height: 100%;
+  fill: white;
+}
+
+a svg path {
+  width: 100%;
+  height: 100%;
+  fill: white;
+}
+
+a.active {
+  background: var(--cor2);
+}
+
+.btnMenu{
+  display: none;
+}
+
+/* CELULAR */
+@media screen and (width <= 680px) {
+  header {
+    width: 100%;
+    height: 80px;
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-areas: "logo btnMenu";
+    grid-template-columns: 85% 15%;
+    align-items: center;
+    justify-items: stretch;
+    overflow-x: hidden;
+  }
+
+  .btnMenu {
+    display: flex;
+    margin-left: 50px;
+  }
+
+  .hamburger {
+    display: block !important;
+  }
+
+
+  nav {
+    width: 0px;
+    height: 100%;
+    overflow: hidden;
+    transition: 0.2s;
+  }
+
+  nav > a {
+    text-decoration: none;
+    color: white;
+    width: 80%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    padding: 0px 10px;
+  }
+}
+
+
+@media screen and (width>=681px) {
+    header{
+      padding-left: 180px;
+  }
+    .menu{
+        display: flex !important;
+    }
+
+    .ing{
+      vertical-align: middle;
+      height: fit-content;
+      width: 100%;
+    }
+
+    header.catalogo {
+      display: flex;
+    }
+}
+
+/* From Uiverse.io by talhabangyal */ 
+.hamburger {
+    cursor: pointer;
+    display: none;
+  }
+  
+  .hamburger input {
+    display: none;
+  }
+  
+  .hamburger svg {
+    /* The size of the SVG defines the overall size */
+    height: 3em;
+    /* Define the transition for transforming the SVG */
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line {
+    fill: none;
+    stroke: black;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    /* Define the transition for transforming the Stroke */
+    transition:
+      stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line-top-bottom {
+    stroke-dasharray: 12 63;
+  }
+  
+  .hamburger input:checked + svg {
+    transform: rotate(-45deg);
+  }
+  
+  .hamburger input:checked + svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+  }
+  

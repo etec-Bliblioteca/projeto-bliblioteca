@@ -1,0 +1,217 @@
+.bgPoup{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.322);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.containerPopUp{
+    position: relative;
+    width: 80%;
+    height: fit-content;
+    /* overflow-y: scroll; */
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px;
+    gap: 10px;
+    z-index: 100 !important;
+}
+
+@media screen and (width<=480px) {
+
+    .containerPopUp{
+        position: absolute;
+        width: 80%;
+        height: 80%;
+        overflow-y: scroll;
+        /* overflow-y: scroll; */
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 50px 25px 10px 25px;
+        gap: 10px;
+        z-index: 100 !important;
+    }
+
+    .containerPopUp::-webkit-scrollbar{
+        display: none;
+    }
+
+    .imgPopUp{
+        /* margin-top: 50px; */
+        width: 100px;
+        height: 150px;
+        border-radius: 5px;
+    }
+}
+
+.btnClose{
+    width: 35px;
+    height: 30px;
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    background: #292D32;
+    border-radius: 10px;
+    color: white;
+}
+
+.imgPopUp{
+    width: 150px;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.containerInfoPopUp{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    /* margin-bottom: 30px; */
+    font-family: var(--font);
+}
+
+.containerInfoPopUp > h1{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.containerInfoPopUp > p{
+    text-align: left;
+    width: fit-content;
+    height: fit-content;
+    font-family: var(--font);
+}
+
+.containerDescPopUp{
+    width: 100%;
+    flex-direction: column;
+    font-family: var(--font);
+}
+
+.containerDescPopUp > p{
+    text-align: justify;
+    text-indent: 20px;
+    /* width: 60%; */
+    text-align: justify;
+}
+
+.containerPopUp > .btnReservar{
+    width: 150px;
+    height: 35px;
+    padding: 10px 0px;
+    border-radius: 5px;
+}
+
+#ativo{
+    background: var(--verde);
+    font-size: 1rem;
+    font-weight: bolder;
+    color: rgb(66, 66, 66);
+    width: 150px;
+    height: 50px;
+}
+
+#inativo{
+    background: var(--vermelho);
+    font-size: 1rem;
+    font-weight: bolder;
+    color: rgb(66, 66, 66);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#inativo > svg{
+    width: 25px;
+    fill: white;
+}
+
+#inativo > svg path{
+    fill: white;
+}
+
+@media screen and (width>=681px) {
+    .containerPopUp{
+        margin-left: 130px;
+        display: grid;
+        grid-template-areas:
+            "img containerInfoPopUp containerInfoPopUp"
+            "img containerInfoPopUp containerInfoPopUp"
+            "containerDesc containerDesc containerDesc"
+            "btn btn btn";
+        grid-template-columns: 1fr 6fr;
+        grid-template-rows: 50% 10% 20% 10%;
+        align-items: stretch;
+        align-content: space-between;
+    }
+
+}
+
+@media screen and (width>=900px) {
+    .containerPopUp{
+        margin-left: 130px;
+        display: grid;
+        grid-template-areas:
+            "img containerInfoPopUp containerInfoPopUp"
+            "img containerInfoPopUp containerInfoPopUp"
+            "containerDesc containerDesc containerDesc"
+            "btn btn btn";
+        grid-template-columns: 1fr 6fr;
+        grid-template-rows: 50% 10% 20% 10%;
+        align-items: stretch;
+        align-content: space-between;
+    }
+
+    #imgPopUp{
+        grid-area: img;
+    }
+
+    .containerDescPopUp{
+        grid-area: containerDesc;
+    }
+
+    .containerInfoPopUp{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        grid-area: containerInfoPopUp;
+    }
+    
+    .btnReservar{
+        grid-area: btn;
+        align-self: center;
+        justify-self: center;
+    }
+
+    #nomeRevista{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        grid-area: titulo;
+    }
+
+    #autorRevista{
+        grid-area: autor;
+    }
+
+    #qtdeRevista{
+        grid-area: quantidade;
+    }
+
+}

@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/* CARD DE AGENDAMENTOS */
+
+.cardAgd{
+    min-width: fit-content;
+    max-width: fit-content;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 5px;
+    background-color: var(--cor1-1);
+    border-radius: 5px;
+    border: 3px solid black;
+}
+
+.cardAgd form  h1{
+    font-size: 1rem;
+}
+
+.cardAgd form p{
+    font-size: 0.9rem;
+}
+
+.cardAgd form p,h1{
+    font-family: var(--font);
+}
+
+.cardAgd form > .btnAgd{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.btnAgd > button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    gap: 5px;
+    border-radius: 5px;
+    color: white;
+    font-family: var(--font);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.btnEntregar{
+    background: var(--cor1);
+}
+
+.btnAdiar{
+    background: rgb(159, 159, 0);
+}
+
+.btnChamar{
+    background-color: #27B43E;
+}
+
+.btnChamar::before{
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: url("../imagens/logoZapZap.svg");
+    background-size: cover;
+}
+

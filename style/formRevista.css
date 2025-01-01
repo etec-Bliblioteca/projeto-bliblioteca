@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+.formRevista{
+    width: 900px;
+    height: fit-content;
+    padding: 30px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    border: 5px solid black;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.formRevista > h1{
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  font-family: var(--font);
+}
+
+.campoForm{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 30px;
+}
+
+.input {
+    width: 400px;
+    height: 44px;
+    background-color: #FFFFFF;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 2px solid black;
+    font-size: 1rem;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: .3rem;
+    font-size: .9rem;
+    font-weight: bold;
+    color: #05060f99;
+    transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
+  }
+  
+  .input:hover, .input:focus, .input-group:hover .input {
+    outline: none;
+    border-color: #05060f;
+  }
+  
+  .input-group:hover .label, .input:focus {
+    color: #05060fc2;
+  }
+
+  .input-group{
+    width: 100%;
+    height: fit-content;
+  }
+
+  textarea.input{
+    width: 100%;
+    min-height: 200px;
+  }
+
+
+  .inputImg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 100px;
+    border: 2px solid black;
+    background: white;
+    /* overflow: hidden; */
+    border-radius: 10px;
+  }
+
+  .inputImg > svg{
+    width: 30px;
+  }
+
+  input#imgCapa{
+    display: none;
+  }
+
+  
+  input#imgEvento{
+    display: none;
+  }
+
+  .imgCapaPreview{
+    width: 100%;
+    height: 100%;
+  }
+
+  .campoImgPreview{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 250px;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  .campoImgPreviewEvento{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    height: 250px;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+#btnCadastrar,#btnCancelar{
+  width: fit-content;
+  height: fit-content;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  font-family: var(--font);
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+#btnCadastrar{
+  background: #0D8B0A;
+}
+#btnCancelar{
+  background: #FF0404;
+}
+
+#btnCancelar svg ,#btnCadastrar svg{
+  width: 20px;
+}
+
+#btnCancelar svg path,#btnCadastrar svg path{
+  fill: white;
+}
