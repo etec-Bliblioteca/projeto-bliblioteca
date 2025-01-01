@@ -43,7 +43,7 @@ if (isset($_POST['btnCadastrar'])) {
                 //CRIA UMA COPIA DO ARQUIVO EM UMA PASTA ESCOLHIDA
                 if(move_uploaded_file($tmp, $pasta . $nomeImg)){
                     $_SESSION['msg'] = "REVISTA ADICIONADA COM SUCESSO";
-                    header("Location: ../adicionar.html");
+                    header("Location: ../adicionar.php");
                 }
             }
         }
